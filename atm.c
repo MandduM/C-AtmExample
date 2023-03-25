@@ -1,43 +1,43 @@
 #include <stdio.h>
 main()
 {
-int bakiye = 1000;
-int islem,tutar;
+int money = 1000;
+int process,amount;
 
-printf("Bakiyeniz: %d",bakiye);
-printf("\n\n**** ISLEMLER ****\n");
-printf("1. Para Cekme\n");
-printf("2. Para Yatirma\n");
-printf("3. Para Bakiye Sorgulama\n");
-printf("4. Kart Iade\n");
+printf("Money: %d",money);
+printf("\n\n**** TRANSACTIONS ****\n");
+printf("1. WITHDRAW MONEY\n");
+printf("2. LOAD MONEY\n");
+printf("3. MONEY BALANCE QUERY\n");
+printf("4. CARD RETURN\n");
 
-while(islem != 4){
-printf("\nIsleminizi giriniz: ");
-scanf("%d",&islem);
+while(process != 4){
+printf("\nEnter your transaction: ");
+scanf("%d",&process);
 
-switch(islem){
+switch(process){
 case 1:
-printf("Bakiyeniz : %d\n",bakiye);
-printf("Cekmek istediginiz tutari giriniz : ");
-scanf("%d",&tutar);
-if(tutar>1000){
-printf("Yetersiz bakiye tekrar giriniz !!");
-scanf("%d",&tutar);
+printf("Money : %d\n",money);
+printf("Enter the amount you want to withdraw : ");
+scanf("%d",&amount);
+if(amount>1000){
+printf("insufficient balance !!");
+scanf("%d",&amount);
 }
-bakiye -= tutar;
-printf("Yeni Bakiyeniz : %d",bakiye);
+money -= amount;
+printf("your new balance : %d",money);
 break;
 case 2:
-printf("Bakiyeniz : %d\n",bakiye);
-printf("Yatirmak istediginiz tutari giriniz : ");
-scanf("%d",&tutar);
-bakiye += tutar;
-printf("Yeni Bakiyeniz : %d",bakiye);
+printf("Your Money : %d\n",money);
+printf("Enter the amount you want to deposit : ");
+scanf("%d",&amount);
+money += amount;
+printf("your new balance : %d",money);
 break;
 case 3:
-printf("Bakiyeniz : %d\n",bakiye);
+printf("Your Money : %d\n",money);
 break;
 }
 }
-printf("Iyi gunler...");
+printf("Have a nice day...");
 }
